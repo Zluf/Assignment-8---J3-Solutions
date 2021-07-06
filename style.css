@@ -1,0 +1,289 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*Common styling*/
+
+header, main, footer {
+  font-size: 2.3vh;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2em;
+  list-style: none;
+}
+
+h2, h3 {
+  line-height: 1.5em;
+}
+
+a, address {
+  text-decoration: none;
+  color: white;
+  font-style: normal;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+}
+
+/*Header*/
+
+header {
+  width: 100%;
+  height: 90vh;
+  background-color: #5BB3E0;
+}
+
+header .fixed {
+  position: fixed;
+  display: block;
+  margin: 20px 0 0 20px;;
+}
+
+header .fixed a {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 500px;
+  margin-left: -410px;
+  transform: rotate(-90deg);
+}
+
+header .fixed a::before {
+  background-color: white;
+}
+
+header .fixed img {
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 40px 60px 0 150px;
+}
+
+header nav ul {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .contact-address {
+  display: flex;
+  width: 35vw;
+  justify-content: space-between;
+}
+
+header .contact a {
+  display: block;
+}
+
+header h2 {
+  width: 55vw;
+  color: white;
+  font-size: 5vh;
+  margin: 0 0 0 20vw;
+  transform: translateY(40%);
+
+}
+
+header > img {
+  display: block;
+  width: 65vw;
+  margin: 60px auto;
+}
+
+header .icons {
+  display: block;
+  position: absolute;
+  top: 70vh;
+  right:40px;
+  color: white;
+}
+
+header .icons i {
+  display: block;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/*MAIN*/
+
+main {
+}
+
+main > a {
+  position: relative;
+  width: 440px;
+  height: 70px;
+  background-color: #F7F7F7;
+  color: #5BB3E0;
+  top: 60px;
+  left: 52%;
+}
+
+main > a::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background-color: #5BB3E0;
+}
+
+main .container {
+  margin: 0 0 0 20%;
+}
+
+main article h3, p {
+  width: 40vw;
+}
+
+main article h3 {
+  margin: 140px 0 30px 0;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+main ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: red;
+  margin: 50px 0 0 13%;
+}
+
+main ul li {
+  width: 250px;
+  height: 500px;
+  background-color: orange;
+}
+
+
+
+main ul li img {
+  height: 50%;
+}
+
+main ul li img, p {
+  width: 100%;
+}
+
+main ul li a {
+  width: 200px;
+  height: 50px;
+  background-color: blue;
+}
+
+main ul li .button::after {
+  background-color: black;
+}
