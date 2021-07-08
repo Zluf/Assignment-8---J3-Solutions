@@ -103,7 +103,7 @@ input, select {
 
 /*Common styling*/
 
-header, main, footer {
+main, footer {
   font-size: 2.5vh;
 }
 
@@ -148,14 +148,17 @@ a, address {
 
 header {
   width: 100%;
+  /* height: 600px; */
   height: 90vh;
+  font-size: 1.8vh;
   background-color: #5BB3E0;
 }
 
 header .fixed {
   position: fixed;
-  display: block;
-  margin: 20px 0 0 20px;;
+  display: flex;
+  transform: rotate(-90deg);
+  margin: 250px 0 0 -200px;
 }
 
 header .fixed a {
@@ -163,16 +166,18 @@ header .fixed a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 500px;
-  margin-left: -410px;
-  transform: rotate(-90deg);
 }
 
 header .fixed a::before {
+  content: "";
+  width: 60px;
+  height: 1px;
   background-color: white;
 }
 
 header .fixed img {
+  transform: rotate(90deg);
+  margin-left: 40px;
 }
 
 header nav {
@@ -189,21 +194,21 @@ header nav ul {
   justify-content: space-between;
 }
 
-header .contact-address {
+.contact-address {
   display: flex;
   width: 35vw;
   justify-content: space-between;
 }
 
-header .contact a {
+.contact-address .contact a {
   display: block;
 }
 
 header h2 {
-  width: 55vw;
+  width: 55%;
   color: white;
   font-size: 5vh;
-  margin: 0 0 0 20vw;
+  margin: 50px 0 0 20vw;
   transform: translateY(40%);
 
 }
@@ -256,7 +261,11 @@ main .container article h3, main .container article p {
 main article h3 {
   margin: 140px 0 30px 0;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 3.5vh;
+}
+
+main article p {
+  line-height: 4vh;
 }
 
 main ul {
@@ -268,7 +277,7 @@ main ul {
 
 main ul li {
   position: relative;
-  width: 250px;
+  width: 35vh;
   height: 400px;
   color: #63ABDA;
   margin-right: 5vw;
@@ -340,20 +349,39 @@ main .container > .button::after {
   background-color: white;
 }
 
+/* FOOTER */
+
 footer {
+  width: 80%;
+  margin: 80px 0;
+  padding-top: 40px;
+  border-top: 1px solid #E5E5E5;
+}
+
+footer .top-footer {
   display: flex;
   justify-content: space-between;
-  background-color: red;
 }
 
 footer * {
   color: #A2A2A2;
-  font-size: 0.9em;
+  font-size: 1.5vh;
 }
 
-footer nav ul {
-  width: 20vw;
-  display: flex;
-  justify-content: space-around;
-  background-color: orange;
+footer nav {
+  display:flex;
+  flex-flow: column wrap;
+  align-items: baseline;
+  align-content: space-between;
+  width: 200px;
+  height: 9vh;
+  margin-bottom: 20px;
+}
+
+footer .contact-address {
+  width: 25vw;
+}
+
+footer p {
+  margin-bottom: 1em;
 }
