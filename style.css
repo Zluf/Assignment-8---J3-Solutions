@@ -103,8 +103,8 @@ input, select {
 
 /*Common styling*/
 
-header, main, footer {
-  font-size: 2.3vh;
+main, footer {
+  font-size: 2.5vh;
 }
 
 * {
@@ -127,26 +127,38 @@ a, address {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-size: 0.8em;
 }
 
 .button::after {
   content: "";
-  width: 70px;
+  width: 20%;
   height: 1px;
+}
+
+.outer-container {
+  margin-left: 15%;
+}
+
+.container {
+  margin-left: 5%;
 }
 
 /*Header*/
 
 header {
   width: 100%;
+  /* height: 600px; */
   height: 90vh;
+  font-size: 1.8vh;
   background-color: #5BB3E0;
 }
 
 header .fixed {
   position: fixed;
-  display: block;
-  margin: 20px 0 0 20px;;
+  display: flex;
+  transform: rotate(-90deg);
+  margin: 250px 0 0 -200px;
 }
 
 header .fixed a {
@@ -154,16 +166,18 @@ header .fixed a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 500px;
-  margin-left: -410px;
-  transform: rotate(-90deg);
 }
 
 header .fixed a::before {
+  content: "";
+  width: 60px;
+  height: 1px;
   background-color: white;
 }
 
 header .fixed img {
+  transform: rotate(90deg);
+  margin-left: 40px;
 }
 
 header nav {
@@ -180,21 +194,21 @@ header nav ul {
   justify-content: space-between;
 }
 
-header .contact-address {
+.contact-address {
   display: flex;
   width: 35vw;
   justify-content: space-between;
 }
 
-header .contact a {
+.contact-address .contact a {
   display: block;
 }
 
 header h2 {
-  width: 55vw;
+  width: 55%;
   color: white;
   font-size: 5vh;
-  margin: 0 0 0 20vw;
+  margin: 50px 0 0 20vw;
   transform: translateY(40%);
 
 }
@@ -202,7 +216,7 @@ header h2 {
 header > img {
   display: block;
   width: 65vw;
-  margin: 60px auto;
+  margin-top: 60px;
 }
 
 header .icons {
@@ -224,51 +238,78 @@ header .icons i {
 main {
 }
 
-main > a {
+.fixed-2 {
+  position: fixed;
+  display: flex;
+  transform: rotate(-90deg);
+  margin: 250px 0 0 -200px;
+  z-index: 0;
+}
+
+.fixed-2 a {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5BB3E0;;
+}
+
+.fixed-2 a::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #5BB3E0;;
+}
+
+.fixed-2 img {
+  transform: rotate(90deg);
+  margin-left: 40px;
+}
+
+main > .button {
   position: relative;
   width: 440px;
   height: 70px;
   background-color: #F7F7F7;
   color: #5BB3E0;
-  top: 60px;
+  top: 7vh;
   left: 52%;
 }
-
-main > a::after {
+main > .button::after {
   content: "";
   width: 70px;
   height: 1px;
   background-color: #5BB3E0;
 }
 
-main .container {
-  margin: 0 0 0 20%;
-}
-
-main article h3, p {
+main .container article h3, main .container article p {
   width: 40vw;
 }
 
 main article h3 {
   margin: 140px 0 30px 0;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 3.5vh;
+}
+
+main article p {
+  line-height: 4vh;
 }
 
 main ul {
   display: flex;
-  justify-content: space-around;
-  background-color: red;
-  margin: 50px 0 0 13%;
+  margin: 50px 0 0 0;
+  position: relative;
+  padding-left: 5%;
 }
 
 main ul li {
-  width: 250px;
-  height: 500px;
-  background-color: orange;
+  position: relative;
+  width: 35vh;
+  height: 400px;
+  color: #63ABDA;
+  margin-right: 5vw;
 }
-
-
 
 main ul li img {
   height: 50%;
@@ -278,12 +319,97 @@ main ul li img, p {
   width: 100%;
 }
 
-main ul li a {
-  width: 200px;
+main ul li .button {
+  position: absolute;
+  bottom: -20px;
+  width: 80%;
   height: 50px;
-  background-color: blue;
+  background-color: white;
+  color: #052655
+}
+
+main ul li:nth-child(2) a {
+  background-color: #5BB3E0;
+}
+
+main ul li h4 {
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+main ul li p {
+  font-size: 0.75em;
+
 }
 
 main ul li .button::after {
-  background-color: black;
+  background-color: #052655;
+}
+
+main ul .lower-layer {
+  content: "";
+  position: absolute;
+  background-color: #ECF5FB;
+  top: 120px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main .container h5 {
+  width: 50vw;
+  margin: 100px 0 30px 0;
+  font-weight: normal;
+  font-size: 1.7em;
+  line-height: 1.5em;
+  color: #5BB3E0;
+}
+
+main .container > .button {
+  width: 200px;
+  height: 40px;
+  background-color: #5BB3E0;
+
+}
+main .container > .button::after {
+  background-color: white;
+}
+
+/* FOOTER */
+
+footer {
+  width: 80%;
+  margin: 80px 0;
+  padding-top: 40px;
+  border-top: 1px solid #E5E5E5;
+}
+
+footer .top-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer * {
+  color: #A2A2A2;
+  font-size: 1.5vh;
+}
+
+footer nav {
+  display:flex;
+  flex-flow: column wrap;
+  align-items: baseline;
+  align-content: space-between;
+  width: 200px;
+  height: 9vh;
+  margin-bottom: 20px;
+}
+
+footer .contact-address {
+  width: 25vw;
+}
+
+footer p {
+  margin-bottom: 1em;
 }
